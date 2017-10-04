@@ -6,7 +6,9 @@
 \begin{document}
 
 \title{
-  Bancor Protocol（バンコール・プロトコル） \\
+  \textbf{Bancorプロトコル}
+  \protect\linebreak
+  \protect\linebreak
   \large
   スマートコントラクトを通じて、トークンの継続的な流動性を確保し、非同期的な価格発見を可能にするスマートトークンについて
 }
@@ -17,15 +19,15 @@
 \maketitle
 
 \begin{center}
-  \item[訳者:] 栗林 健太郎
+  \item[訳者:] \href{https://kentarok.org}{栗林 健太郎}
   \item[原本:] \href{http://www.hyuki.com/girl/}{Draft Version 0.99}
 \end{center}
 
 \begin{figure}[b]
-  「二重の一致問題」は、Jevons (1875)によって提起された。
+  「欲求の二重一致問題」は、Jevons (1875)によって提起された。
 
   \begin{quotation}  
-    取引は二者間で、かつ、その二者において処分可能な所有物がお互いの要求を満たす場合に可能となる。要求を抱く多くの人々が存在し、そして、要求されるべき多くの所有物が存在する。しかし、現に取引が行われるためには、まれにしか起こらないような、二重の一致が必要になる。
+    取引は二者間で、かつ、その二者において処分可能な所有物がお互いの欲求を満たす場合に可能となる。欲求を抱く多くの人々が存在し、そして、欲求されるべき多くの所有物が存在する。しかし、現に取引が行われるためには、まれにしか起こらない、欲求の二重一致が必要になる。
   \end{quotation}
 \end{figure}
 
@@ -34,11 +36,31 @@
 \tableofcontents
 \newpage
 
-\section{Bancor Protocol（バンコール・プロトコル）}
+\section{Bancorプロトコル}
 
+\emph{
+  要約： Bancor（バンコール）プロトコルには、スマートコントラクト上のトークンのための、価格発見
+  \footnote{
+    $\href{
+      https://en.wikipedia.org/wiki/Price_discovery
+    }{
+      https://en.wikipedia.org/wiki/Price\_discovery
+    }$
+  }
+  と流動性を担保するメカニズムが備わっている。スマートトークンはひとつ以上のトークンを準備金として保有し、準備金としてのトークンと交換することで、誰もが即座にスマートトークンを購入したり、流動化したりすることができる。 そしてそれは、スマートコントラクトを直接的に通じて行われ、継続的に計出される価格において取引される。その計算は、売買をバランスする公式に基づいて行われる。
+} \\
 
+Bancorプロトコルは、第二次世界大戦後、国際的な通貨の換算をシステム化するための、Bancorと呼ばれる超国家的な準備通貨の導入に関する、ケインズ経済学者（たち）の提案
+\footnote{
+  $\href{
+    https://en.wikipedia.org/wiki/Bancor
+  }{
+    https://en.wikipedia.org/wiki/Bancor
+  }$
+}
+に敬意を表して名付けられた。
 
-  \subsection{スマート・トークン入門：流動性問題の解決策}
+  \subsection{スマートトークン入門：流動性問題の解決策}
 
 
 
@@ -46,7 +68,7 @@
 
 
 
-  \subsection{スマート・トークンのユースケース}
+  \subsection{スマートトークンのユースケース}
 
 
 
@@ -62,27 +84,27 @@
 
 
 
-    \subsubsection{非中央集権的なトークン・バスケット}
+    \subsubsection{非中央集権的なトークンバスケット}
 
 
 
-    \subsubsection{ネットワーク・トークン}
+    \subsubsection{ネットワークトークン}
 
 
 
-  \subsection{スマート・トークンの利点}
+  \subsection{スマートトークンの利点}
 
 
 
-  \subsection{バンコール・プロトコルのエコシステム}
+  \subsection{Bancorプロトコルのエコシステム}
 
 
 
-  \subsection{「二重の一致問題」への解決策}
+  \subsection{「欲求の二重一致問題」への解決策}
 
 
 
-    \subsubsection{スマート・トークンの初期化とカスタマイゼーション}
+    \subsubsection{スマートトークンの初期化とカスタマイゼーション}
 
 
 
@@ -90,7 +112,7 @@
 
 
 
-  \subsection{Bancor Network Token (BNT)：初めてのスマート・トークン}
+  \subsection{Bancor Network Token (BNT)：初めてのスマートトークン}
 
 
 
