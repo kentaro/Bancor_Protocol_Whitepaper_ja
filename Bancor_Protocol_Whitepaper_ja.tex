@@ -86,7 +86,11 @@ Bancorプロトコルは、第二次世界大戦後、国際的な通貨の換�
 
   \subsection{価格発見の新手法}
 
+  スマートトークンは価格発見において、「不変の準備率（\textit{Constant Reserve Ratio: CRR}）」に基づく新しい方法を用いている。CRRは、スマートトークンの作成者により、準備トークンのそれぞれに対して設定される。また、スマートトークンの現在の供給量と準備トークンの残高とともに、価格の計算に使われ、それは以下の通り示される：
 
+  \begin{equation*} \label{eq:price-discovery-formula}
+    Price = \frac{Balance}{Supply \times CRR}
+  \end{equation*}
 
   \subsection{スマートトークンのユースケース}
 
