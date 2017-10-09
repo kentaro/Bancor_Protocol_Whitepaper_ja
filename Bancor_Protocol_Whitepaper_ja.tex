@@ -1,8 +1,9 @@
 \documentclass{jsarticle}
 
-\usepackage[dvipdfmx]{graphicx,color,hyperref}
 \usepackage{amsmath}
+\usepackage[dvipdfmx]{graphicx,hyperref}
 \usepackage{url}
+\usepackage{wrapfig}
 
 \begin{document}
 
@@ -188,7 +189,45 @@ Bprotocol財団に資金提供することで、ユーザはBNTを生成する�
     \item 資金の一部は、イノベーティブで見込みのある、BNTネットワーク上で将来行われるスマートトークンのクラウドセールに参加し、支援することに使われる。それらは、地域トークンネットワークやコミュニティ通貨、クラウドファンディングプロジェクトや、その他オンラインであったりオフラインであったりのトークンを元にしたエコシステムに関する、新規の、場所に基づく、階層的なスマートトークンの動きであるかもしれない。
   \end{itemize}
 
-\section{トランザクションごとの価格計算}
+\section{例と図解}
+
+  \subsection{例1：スマートトークンの取引フロー}
+
+  この例においては、新規発行トークン（BNT）のクラウドセールで300,000ETHを集めたと想定する。
+
+  \begin{wrapfigure}{r}{60mm}
+    \begin{center}
+     \includegraphics{fig1.png}
+    \end{center}
+   \end{wrapfigure} 
+   \noindent
+
+   300,000BNTが1対1の交換比率で発行され、クラウドセールの参加者に移される。240,000ETHはBNTプロジェクトが発展するための資金として差し向けられ、60,000ETH（CRRは20\%とする）はBNTのスマートコントラクト内に、準備残高として保持される。
+
+   \begin{itemize}
+    \item BNTを購入したり精算したりすることは、クラウドセールが完了すると同時に可能になる。取引開始時の価格は、クラウドセールにおける最後の価格になり、この例では、1ETHが最初のBNTの価格となる。
+    \item BNTを精算する者は、BNTの準備残高のからETHを得る。精算されたBNTは破棄され、それにつれてBNTの価格が下がる。
+    \item BNTを購入する者は、新たに作られたBNTを得る。ETHでの支払いはスマートコントラクトによる準備残高に追加され、BNTの価格は上がる。
+   \end{itemize}
+
+   ETHの準備残高は常に、BNTの時価総額の20\%のままであり続ける。
+
+   \begin{figure}[htbp]
+    \begin{center}
+     \includegraphics[scale=0.3]{fig2.png}
+    \end{center}
+   \end{figure}
+
+   \href{https://goo.gl/3hR6e8}{スプレッドシートへのリンク}
+
+  \subsection{例2：トークンチェンジャーの取引フロー}
+
+
+  \subsection{潜在的なBancorネットワークの図解}
+
+
+
+\section{取引ごとの価格計算}
 
 
 
