@@ -2,7 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage[dvipdfmx]{graphicx,color}
-\usepackage[dvipdfmx,colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage[dvipdfmx,colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
 \usepackage{url}
 \usepackage{wrapfig}
 
@@ -223,10 +223,50 @@ Bprotocol財団に資金提供することで、ユーザはBNTを生成する�
 
   \subsection{例2：トークンチェンジャーの取引フロー}
 
+  この例においては、BNTGNOという、BNTとGNO（Gnosis）のトークンチェンジャーとして機能するスマートトークンを扱う。BNTGNOは、BNTおよびGNOをそれぞれ50\%のCRRで準備トークンとして持ち、合わせて100\%のCRRとなる。
+
+  \begin{wrapfigure}{r}{60mm}
+    \begin{center}
+     \includegraphics[keepaspectratio,scale=0.8]{fig3.png}
+    \end{center}
+   \end{wrapfigure} 
+  \noindent
+
+  現在の市場価格が$1 BNT = 2 GNO$という前提で、コントラクトにより初期価格が$1 BNT = 2 GNO = 1 BNTGNO$と定義されるとする。そして、この例では、10,000BNTGNOが発行され、最初の準備残高として預託される。
+
+  \begin{itemize}
+    \item 開始時の価格は$1 BNTGNO = 1 BNT = 2 GNO$としてコントラクトにコントラクト上に設定される。
+    \item BNTGNOは、BNTでもGNOでも購入できる。BNTGNOの価格は、BNTあるいはGNOの、BNTGNOを購入した側に対して上昇し、（BNTGNOの供給量の増加により）、別の一方の準備トークンに対して下降する。
+    \item BNTGNOは、BNTにもGNOにも精算できる。それにともない、精算された側の準備トークンに対してBNTGNOの価格は下降し、もう一方に対しては上昇する。
+  \end{itemize}
+
+  このシナリオは、50\%ずつのCRRを持つ準備トークンによって100\%の準備残高を持つスマートトークンが、誰に対しても開かれており、その価格が自然と裁定取引によってバランスするような、非中央集権的なトークンチェンジャーとして機能する実例を示すものである。トークンチェンジャーとトークンのバスケットが自動的にCRRの割合を維持することになる。
+
+  \begin{figure}[h]
+   \begin{center}
+    \includegraphics[scale=0.3]{fig4.png}
+   \end{center}
+  \end{figure}
+
+  \href{https://goo.gl/3hR6e8}{スプレッドシートへのリンク}
 
   \subsection{潜在的なBancorネットワークの図解}
 
+  下図において：
 
+  \begin{itemize}
+    \item BTNは、Etherにより実現するスマートトークンである。
+    \item ETH、DGD、DGX、REP、GNTは、標準的なEthereumによるトークンである。
+    \item NEWは、クラウドファンディングのキャンペーンや、コミュニティ通貨などによって新規に作成されるスマートトークンである。
+    \item スマートトークンは、準備残高をもつ（矢印は、準備トークンを指し示す）。  
+    \item トークンチェンジャーは、ふたつ以上の準備残高からなる100\%の準備残高に保証されている。
+  \end{itemize}
+
+  \begin{figure}[h]
+   \begin{center}
+    \includegraphics{fig5.png}
+   \end{center}
+  \end{figure}
 
 \section{取引ごとの価格計算}
 
