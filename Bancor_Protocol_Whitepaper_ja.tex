@@ -270,7 +270,30 @@ Bprotocol財団に資金提供することで、ユーザはBNTを生成する�
 
 \section{取引ごとの価格計算}
 
+スマートトークンの価格計算は、実際には、トランザクションサイズの関数として計算される。
 
+R：準備トークンの残高
+
+S：スマートトークンの供給量
+
+F：不変の準備率
+
+\begin{itemize}
+  \item $R$、$S$、$F$を上記の通りおく時、準備トークン$E$との交換において得られるスマートトークン$T$は
+  \begin{equation*} \label{eq:price-discovery-formula}
+    T = S((1 + \frac{E}{R})^F - 1)
+  \end{equation*}
+
+  \item $R$、$S$、$F$を上記の通りおく時、スマートトークン$T$との交換において得られる準備トークン$E$は
+  \begin{equation*} \label{eq:price-discovery-formula}
+    E = R(1 - F\sqrt{1 - \frac{T}{S}})
+  \end{equation*}
+\end{itemize}
+
+\emph{\href{https://goo.gl/HXQBUr}{数学的証明}も用意している。}
+\footnote{
+  数学的証明は、\url{https://goo.gl/HXQBUr}にて、オンラインで閲覧できる。
+}
 
 \section{要約}
 
